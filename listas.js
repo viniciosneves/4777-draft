@@ -34,3 +34,27 @@ console.log('Depois do unshift:', frutas);
 const primeira = frutas.shift();
 console.log('Depois do shift:', frutas);
 console.log('Fruta removida:', primeira);
+
+
+// percorrendo
+
+const linguagens = ['JavaScript', 'Python', 'Java', 'C#'];
+
+console.log('--- for tradicional ---');
+
+for (let i = 0; i < linguagens.length; i++) {
+  console.log(`Posição ${i}: ${linguagens[i]}`);
+}
+
+console.log('\n--- for...of ---');
+
+for (const linguagem of linguagens) {
+  console.log('Linguagem:', linguagem);
+}
+
+console.log('\n--- forEach ---');
+
+// forEach recebe uma função como argumento
+linguagens.forEach((linguagem, indice) => {
+  console.log(`Linguagem ${indice + 1}: ${linguagem}`);
+});
