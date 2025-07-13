@@ -1,12 +1,35 @@
-console.log("Calculadora de Troco");
+// calculadora.js
+// Rodar com: node calculadora.js
 
-let valorCompra = 17.50;    // valor total da compra
-let valorPago = 20.00;      // valor que o cliente pagou
+const readline = require('readline');
 
-let troco = valorPago - valorCompra;
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-if (troco < 0) {
-  console.log("Valor insuficiente! Falta pagar:", -troco);
-} else {
-  console.log("Troco a devolver:", troco);
-}
+console.log('Bem-vindo(a) à Calculadora do Terminal!\n');
+
+// Passo 1: pedir o primeiro número
+rl.question('Digite o primeiro número: ', (input1) => {
+  const numero1 = Number(input1);
+
+  // TODO: verificar se numero1 é um número válido
+
+  // Passo 2: pedir o operador
+  rl.question('Digite o operador (+, -, *, /): ', (operador) => {
+
+    // TODO: verificar se o operador é válido
+
+    // Passo 3: pedir o segundo número
+    rl.question('Digite o segundo número: ', (input2) => {
+      const numero2 = Number(input2);
+
+      // TODO: verificar se numero2 é um número válido
+
+      // TODO: fazer a operação de acordo com o operador
+
+      // TODO: mostrar o resultado e encerrar o programa com rl.close()
+    });
+  });
+});
